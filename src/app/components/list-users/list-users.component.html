@@ -1,0 +1,72 @@
+<div class="container-page-body">
+    <div class="container-sub-page-body">
+        <div class="">
+            <div>
+                <table *ngIf="users" class="style-tabla-margin">
+                    <thead class="thead-relative">
+                        <tr>
+                            <th class="titles-list">Nombre</th>
+      
+                            <th class="titles-list">Apellido</th>
+      
+                            <th class="titles-list">Email</th>
+      
+                            <th class="titles-list style-none-responsive-tr">Fecha de nacimiento</th>
+      
+                            <th class="titles-list style-none-responsive-tr">Direccion</th>
+      
+                            <th class="titles-list style-none-responsive-tr">Calle </th>
+      
+                            <th class="titles-list style-none-responsive-tr">Codigo postal</th>
+      
+                            <th class="titles-list style-none-responsive-tr"></th>
+                        </tr>
+                        <tr class="tr-border-button"></tr>
+                    </thead>
+                    <tr *ngFor="let user of users" class="style-pointer">
+                      <td class="content-tr-list">{{user.firstname}}</td>
+                      
+                      <td class="content-tr-list">{{user.lastname}}</td>
+
+                      <td class="content-tr-list style-responsive-width">{{user.email}}</td>
+
+                      <td class="content-tr-list style-none-responsive-tr">{{user.birthDate}}</td>
+
+                      <td class="content-tr-list style-none-responsive-tr">{{user.address.country}}</td>
+
+                      <td class="content-tr-list style-none-responsive-tr">{{user.address.city}}</td>
+
+                      <td class="content-tr-list style-none-responsive-tr">{{user.address.postalcode}}</td>
+
+                      <td>
+                        <div class="contaier-bottons-flex">
+                            
+                            <button (click)="edit(user)" class="styles-bottons">
+                                <mat-icon class="styles-icons-bottons" aria-hidden="false" aria-label="Example home icon" fontIcon="edit" color="black"></mat-icon>
+                            </button>
+                            <button (click)="remove(user)" class="styles-bottons">
+                                <mat-icon class="styles-icons-bottons" aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="black"></mat-icon>
+                            </button>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                  </table>
+
+                    <button (click)="createUser()" class="styles-bottons">
+                        <mat-icon class="styles-icons-bottons" aria-hidden="false" aria-label="Example home icon" fontIcon="add" color="black"></mat-icon>
+                    </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<app-modal-edit-user 
+    [isOpen]="openModalEdit" 
+    [user]="userSelect"
+    (onCloseModal)="onCloseModal()"
+    (onSaveUser)="saveUser($event)"
+    (closeFuntion)="onCloseModal()"
+></app-modal-edit-user>

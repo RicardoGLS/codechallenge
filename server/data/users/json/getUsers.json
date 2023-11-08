@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "address": {
+        "street": "Lindenstraße 89",
+        "city": "Freiburg im Breisgau",
+        "country": "DE",
+        "postalcode": "42030"
+      },
+      "firstname": "John",
+      "lastname": "Smith",
+      "email": "john.smith@example.com",
+      "birthDate": "1980-01-23"
+    },
+    {
+      "id": 1699445330948,
+      "firstname": "Ricardo",
+      "lastname": "Leon",
+      "email": "ricardo@gmail.com",
+      "birthDate": "00/00/0000",
+      "address": {
+        "id": 1699445330948,
+        "street": "0000000",
+        "city": "0000000",
+        "country": "",
+        "postalcode": "00000"
+      }
+    },
+    {
+      "id": 1699445381608,
+      "address": {
+        "id": 1699445381608
+      }
+    },
+    {
+      "id": 1699445481246,
+      "firstname": "Ricardo",
+      "lastname": "Leon",
+      "email": "ricardo@gmail.com",
+      "birthDate": "00/00/0000",
+      "address": {
+        "id": 1699445481246,
+        "street": "0000000",
+        "city": "0000000",
+        "country": "",
+        "postalcode": "00000"
+      }
+    },
+    {
+      "id": 1699445695095,
+      "firstname": "John2",
+      "lastname": "Smith",
+      "email": "john.smith@example.com",
+      "birthDate": "1980-01-23",
+      "address": {
+        "street": "Lindenstraße 89",
+        "city": "Freiburg im Breisgau",
+        "country": "DE",
+        "postalcode": "42030"
+      }
+    }
+  ]
+}
