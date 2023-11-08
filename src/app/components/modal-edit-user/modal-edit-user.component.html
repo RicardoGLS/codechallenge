@@ -1,0 +1,73 @@
+<div *ngIf="isOpen" class="container-modal-edit-user">
+
+    <div (click)="closingModal()" class="container-modal-edit-user"></div>
+
+    <div class="sub-container-modal-edit-user">
+        <div class="title-form-edit-text">
+            Editar Usuario
+        </div>
+        <div class="div-style-ul-form-edit">
+            <div>
+                Nombre
+            </div>
+            <div>
+                <input placeholder="Nombre" [(ngModel)]="firstName"class="input-style-edit-form" type="text">
+            </div>
+        </div>
+        <div class="div-style-ul-form-edit">
+            <div>
+                Apellido
+            </div>
+            <div>
+                <input placeholder="Apellido" [(ngModel)]="lastName" class="input-style-edit-form" type="text" [value]="user?.lastname">
+            </div>
+        </div>
+        <div class="div-style-ul-form-edit">
+            <div>
+                Email
+            </div>
+            <div>
+                <input placeholder="Email" [(ngModel)]="email" class="input-style-edit-form" type="email"  [value]="user?.email">
+            </div>
+        </div>
+        <div class="div-style-ul-form-edit">
+            <div>
+                Fecha de nacimiento
+            </div>
+            <div>
+                <input placeholder="Fecha de nacimiento" [(ngModel)]="birthDate" class="input-style-edit-form" type="text" [value]="user?.birthDate">
+            </div>
+        </div>
+        <div class="div-style-ul-form-edit">
+            <div>
+                Direccion
+            </div>
+            <div>
+                <input placeholder="Direccion" [(ngModel)]="street" class="input-style-edit-form" type="text" [value]="user?.address?.city">
+            </div>
+        </div>
+
+        <div class="div-style-ul-form-edit">
+            <div>
+                Calle
+            </div>
+            <div>
+                <input placeholder="Calle" [(ngModel)]="city" class="input-style-edit-form" type="text" [value]="user?.address?.street">
+            </div>
+        </div>
+
+        <div class="div-style-ul-form-edit">
+            <div>
+                Codigo postal	
+            </div>
+            <div>
+                <input placeholder="Codigo postal"  [(ngModel)]="postalCode" class="input-style-edit-form" type="text" [value]="user?.address?.postalcode">
+            </div>
+        </div>
+
+        <div class="cont-button-edit-form">
+            <button (click)="closeForm()" class="buttons-edit-form">Close</button>
+            <button (click)="saveInformation()" class="buttons-edit-form">Guardar</button>
+        </div>
+    </div>
+</div>
