@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5838cd8a-4f2b-4cb5-acf2-77a0620c471c",
+		"name": "Api Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31031757"
+	},
+	"item": [
+		{
+			"name": "get user list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"John2\",\r\n    \"lastname\": \"Smith\",\r\n    \"email\": \"john.smith@example.com\",\r\n    \"birthDate\": \"1980-01-23\",\r\n    \"street\": \"Lindenstraße 89\",\r\n    \"city\": \"Freiburg im Breisgau\",\r\n    \"country\": \"DE\",\r\n    \"postalcode\": \"42030\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/1699445695095",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1699445695095"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/1699445578356",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1699445578356"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Ricardo\",\r\n    \"lastname\": \"Leon\",\r\n    \"email\": \"ricardo@gmail.com\",\r\n    \"birthDate\": \"00/00/0000\",\r\n    \"street\": \"0000000\",\r\n    \"city\": \"0000000\",\r\n    \"country\": \"\",\r\n    \"postalcode\": \"00000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
