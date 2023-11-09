@@ -73,6 +73,8 @@ export class ListUsersComponent {
    * Only show modal
    */
   createUser() {
+    //Removemos el usuario anteriormente seleccionado
+    if(this.userSelect) this.userSelect = undefined;
     this.openModalEdit = true;
   }
 }
