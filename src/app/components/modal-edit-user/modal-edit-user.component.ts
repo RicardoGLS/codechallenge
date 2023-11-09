@@ -16,7 +16,6 @@ export class ModalEditUserComponent {
   // Eventos de salida
   @Output() onCloseModal  = new EventEmitter<User>(); // Al cerrar el modal
   @Output() onSaveUser  = new EventEmitter<User>(); // Al guardar la información
-  @Output() closeFuntion  = new EventEmitter(); // Al cerrar la función
 
   // Variables del formulario
   firstName : string = "";
@@ -45,14 +44,20 @@ export class ModalEditUserComponent {
       this.city = this.user.address.city;
       this.country = this.user.address.country;
       this.postalCode = this.user.address.postalcode;
+    } else {
+      // Limpiar la información cuando se quiere crear un nuevo usuario
+      this.firstName = "";
+      this.lastName = "";
+      this.email = "";
+      this.birthDate = "";
+      this.street = "";
+      this.city = "";
+      this.country = "";
+      this.postalCode = "";
     }
   }
 
-  // Método para cerrar el formulario
-  closeForm(){
-    this.onCloseModal.emit(this.user)
-  };
-
+ 
   // Método para guardar la información del formulario
   saveInformation(): void{
     if(!this.user){
@@ -104,6 +109,6 @@ export class ModalEditUserComponent {
 
   // Método para cerrar la función
   closingModal(){
-    this.closeFuntion.emit();
+    this.onCloseModal.emit(this.user)
   };
 }
