@@ -37,15 +37,15 @@ npm run server
 - [x] Web
 
 # Dockerizado:
-- [] Si
+- [ ] Si
 - [x] No
 
 # Postman:
 - [x] Si
-- [] No
+- [ ] No
 
 # Documentación:
-- [] Si
+- [ ] Si
 - [x] No
 
 # Licencia
